@@ -1,0 +1,23 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://evoa@bitbucket.org/evoastudy/nodejs.git"
+  },
+  "author": "Thiago Evoá",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/evoastudy/nodejs#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.7"
+  }
+}
