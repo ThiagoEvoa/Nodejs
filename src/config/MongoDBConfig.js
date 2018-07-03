@@ -2,7 +2,7 @@ const env = require('dotenv').config();
 const mongooseConfig = require('mongoose');
 mongooseConfig.Promise = global.Promise;
 
-mongooseConfig.connect(process.env.MONGO_CONNECTION);
+mongooseConfig.connect(process.env.MONGODB_URI);
 
 mongooseConfig.connection.on('connected', () => {
     console.log('Mongoose connected');
