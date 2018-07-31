@@ -4,7 +4,7 @@ var findAll = async () => {
     return await schedule.find({})
 }
 
-var findById = async () => {
+var findById = async (id) => {
     return await schedule.find({ _id: id })
 }
 
