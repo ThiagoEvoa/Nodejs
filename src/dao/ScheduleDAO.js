@@ -44,7 +44,7 @@ var save = async (objSchedule) => {
     return await schedule.create(objSchedule)
 }
 
-var update = async (schedule) => {
+var update = async (objSchedule) => {
     return await schedule.findByIdAndUpdate({ _id: objSchedule._id }, objSchedule)
 }
 
