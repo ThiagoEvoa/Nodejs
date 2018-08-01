@@ -5,7 +5,7 @@ var findAll = async () => {
 }
 
 var findById = async (id) => {
-    return await schedule.find({ _id: id })
+    return await schedule.findById({ _id: id })
 }
 
 var findByClientId = async (clientId) => {
