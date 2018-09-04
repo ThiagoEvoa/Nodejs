@@ -8,13 +8,13 @@ controller.get('/professional', (req, res, next) => {
     }).catch(next)
 })
 
-controller.get('/professional/:id', (req, res, next) => {
+controller.get('/professional/id/:id', (req, res, next) => {
     professionalDAO.findById(req.params.id).then((result) => {
         res.send(result)
     }).catch(next)
 })
 
-controller.get('/professional/:cpf_cnpj', (req, res, next) => {
+controller.get('/professional/cpf_cnpj/:cpf_cnpj', (req, res, next) => {
     professionalValidator.existProfessionalCpfCnpj(req.body.cpf_cnpj).then((result) => {
         if (result) {
             professionalDAO.findByCpf_Cnpj(req.params.cpf_cnpj).then((result) => {
@@ -26,7 +26,7 @@ controller.get('/professional/:cpf_cnpj', (req, res, next) => {
     })
 })
 
-controller.get('/professional/:name', (req, res, next) => {
+controller.get('/professional/name/:name', (req, res, next) => {
     professionalDAO.findByName(req.params.name).then((result) => {
         res.send(result)
     }).catch(next)

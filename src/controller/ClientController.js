@@ -8,19 +8,19 @@ controller.get('/client', (req, res, next) => {
     }).catch(next)
 })
 
-controller.get('/client/:id', (req, res, next) => {
+controller.get('/client/id/:id', (req, res, next) => {
     clientDAO.findById(req.params.id).then((result) => {
         res.send(result)
     }).catch(next)
 })
 
-controller.get('/client/:cpf', (req, res, next) => {
+controller.get('/client/cpf/:cpf', (req, res, next) => {
     clientDAO.findByCpf(req.params.cpf).then((result) => {
         res.send(result)
     }).catch(next)
 })
 
-controller.get('/client/:name', (req, res, next) => {
+controller.get('/client/name/:name', (req, res, next) => {
     clientDAO.findByName(req.params.name).then((result) => {
         res.send(result)
     }).catch(next)

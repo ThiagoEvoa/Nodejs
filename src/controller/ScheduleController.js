@@ -16,37 +16,37 @@ controller.get('/schedule/:id', (req, res, next) => {
     }).catch(next)
 })
 
-controller.get('/schedule/:clientId', (req, res, next) => {
+controller.get('/schedule/clientid/:clientId', (req, res, next) => {
     scheduleDAO.findByClientId(req.params.clientId).then((result) => {
         res.send(result)
     }).catch(next)
 })
 
-controller.get('/schedule/:professionalId', (req, res, next) => {
+controller.get('/schedule/professionalid/:professionalId', (req, res, next) => {
     scheduleDAO.findByProfessionalId(req.params.professionalId).then((result) => {
         res.send(result)
     }).catch(next)
 })
 
-controller.get('/schedule/:date', (req, res, next) => {
+controller.get('/schedule/date/:date', (req, res, next) => {
     scheduleDAO.findByDate(req.params.date).then((result) => {
         res.send(result)
     }).catch(next)
 })
 
-controller.get('/schedule/:initialTime', (req, res, next) => {
+controller.get('/schedule/initialtime/:initialTime', (req, res, next) => {
     scheduleDAO.findByInitialTime(req.params.initialTime).then((result) => {
         res.send(result)
     }).catch(next)
 })
 
-controller.get('/schedule/:finalTime', (req, res, next) => {
+controller.get('/schedule/finaltime/:finalTime', (req, res, next) => {
     scheduleDAO.findByFinalTime(req.params.finalTime).then((result) => {
         res.send(result)
     }).catch(next)
 })
 
-controller.get('/schedule/:date/:initialTime/:finalTime', (req, res, next) => {
+controller.get('/schedule/datetime/:date/:initialTime/:finalTime', (req, res, next) => {
     scheduleDAO.findByDateTime(req.params.date, req.params.initialTime, req.params.finalTime).then((result) => {
         res.send(result)
     }).catch(next)
