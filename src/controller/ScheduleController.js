@@ -10,7 +10,7 @@ controller.get('/schedule', (req, res, next) => [
     }).catch(next)
 ])
 
-controller.get('/schedule/:id', (req, res, next) => {
+controller.get('/schedule/id/:id', (req, res, next) => {
     scheduleDAO.findById(req.params.id).then((result) => {
         res.send(result)
     }).catch(next)
