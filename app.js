@@ -1,12 +1,12 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const cors = require('cors')
+// const cors = require('cors')
 const env = require('dotenv').config()
 const mongoose = require('./src/config/MongoDBConfig')
 
 var app = express()
 
-app.use(cors())
+// app.use(cors())
 app.use(bodyParser.json())
 
 app.use('/api', require('./src/controller/ClientController'))
