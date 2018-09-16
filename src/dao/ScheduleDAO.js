@@ -35,9 +35,10 @@ var findByDateTime = async (date, initialTime, finalTime) => {
             {
                 $or: [
                     { initialTime: { $gte: initialTime, $lte: initialTime } },
-                    { finalTime: { $gt: finalTime, $lte: finalTime } }]
+                    { finalTime: { $gt: finalTime, $lte: finalTime } }
+                ]
             }]
-    });
+    })
 }
 
 var save = async (objSchedule) => {
