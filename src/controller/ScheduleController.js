@@ -66,15 +66,15 @@ controller.post('/schedule', (req, res, next) => {
                                 res.send(result)
                             }).catch(next)
                         } else {
-                            res.status(422).send({ message: 'Client doens\'t exist in database' });
+                            res.status(422).send({ message: `Client doens't exist in database` });
                         }
                     }).catch(next)
                 } else {
-                    res.status(422).send({ message: 'Professional doens\'t exist in database' });
+                    res.status(422).send({ message: `Professional doens't exist in database` });
                 }
             }).catch(next)
         } else {
-            res.status(422).send({ message: 'Schedule already exist with this range in database.' });
+            res.status(422).send({ message: `Schedule already exist with this range in database.` });
         }
     }).catch(next)
 })

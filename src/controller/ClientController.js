@@ -33,7 +33,7 @@ controller.post('/client', (req, res, next) => {
                 res.send(result)
             }).catch(next)
         } else {
-            res.status(422).send({ error: 'Client already exist with this CPF in database.' })
+            res.status(422).send({ error: `Client already exist with this CPF in database.` })
         }
     }).catch(next)
 })

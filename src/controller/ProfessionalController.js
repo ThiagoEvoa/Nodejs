@@ -21,7 +21,7 @@ controller.get('/professional/cpfcnpj/:cpf_cnpj', (req, res, next) => {
                 res.send(result)
             }).catch(next)
         } else {
-            res.status(422).send('Professional already exist with this CPF or CNPJ in database.')
+            res.status(422).send(`Professional already exist with this CPF or CNPJ in database.`)
         }
     })
 })
