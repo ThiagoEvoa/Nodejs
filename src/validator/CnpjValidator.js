@@ -8,7 +8,7 @@ function validateCnpj(cnpj) {
 
     var numbers, digits, sum, result, pos, cnpjSize, equalDigits;
     equalDigits = 1;
-    if (cnpj.length < 14 && cnpj.length < 15)
+    if (cnpj.length != 14)
         return false;
     for (i = 0; i < cnpj.length - 1; i++)
         if (cnpj.charAt(i) != cnpj.charAt(i + 1)) {

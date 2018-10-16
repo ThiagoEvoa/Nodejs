@@ -7,7 +7,7 @@ function validateCpf(cpf) {
 
     var numbers, digits, sum, result, equalDigits
     equalDigits = 1
-    if (cpf.length < 11)
+    if (cpf.length != 11)
         return false
     for (i = 0; i < cpf.length - 1; i++)
         if (cpf.charAt(i) != cpf.charAt(i + 1)) {
