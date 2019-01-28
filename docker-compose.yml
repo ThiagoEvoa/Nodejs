@@ -1,23 +1,23 @@
 version: "3"
 services:
-  mongo:
+  node:
+      container_name: node-production
+      restart: always
+      image: node-prod
+      build: .
+      command: npm start
+      environment:
+        NODE_ENV: production
+      ports:
+        - "5000:5000"
+      depends_on:
+        - mongodb
+      volumes:
+        - .:/usr/app
+  mongodb:
     container_name: mongo-production
     image: mongo
     volumes:
       - ./data:/data/db
     ports:
       - "27017:27017"
-  node:
-    container_name: node-production
-    restart: always
-    image: node
-    build: .
-    command: npm start
-    environment:
-      NODE_ENV: production
-    ports:
-      - "5000:5000"
-    links:
-      - mongo 
-    volumes:
-    - .:/usr/app
