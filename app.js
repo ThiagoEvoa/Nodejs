@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const env = require('dotenv').config()
 const mongoose = require('./src/config/MongoDBConfig')
+const mysql = require('./src/config/MysqlDBConfig')
 
 var app = express()
 

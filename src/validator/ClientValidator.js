@@ -1,4 +1,4 @@
-const clientDAO = require('../dao/ClientDAO')
+const clientDAO = require('../dao/ClientMongoDAO')
 
 var existClientId = async (id, next) => {
     return await clientDAO.findById(id).then((result) => {

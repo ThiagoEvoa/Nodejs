@@ -1,5 +1,5 @@
 const controller = require('express').Router()
-const clientDAO = require('../dao/ClientDAO')
+const clientDAO = require('../dao/ClientMongoDAO')
 const clientValidator = require('../validator/ClientValidator')
 
 controller.get('/client', (req, res, next) => {

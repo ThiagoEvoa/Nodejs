@@ -1,5 +1,5 @@
 const controller = require('express').Router()
-const professionalDAO = require('../dao/ProfessionalDAO')
+const professionalDAO = require('../dao/ProfessionalMongoDAO')
 const professionalValidator = require('../validator/ProfessionalValidator')
 
 controller.get('/professional', (req, res, next) => {

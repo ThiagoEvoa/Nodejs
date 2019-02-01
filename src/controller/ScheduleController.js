@@ -1,5 +1,5 @@
 const controller = require('express').Router()
-const scheduleDAO = require('../dao/ScheduleDAO')
+const scheduleDAO = require('../dao/ScheduleMongoDAO')
 const scheduleValidator = require('../validator/ScheduleValidator')
 const clientValidator = require('../validator/ClientValidator')
 const professionalValidator = require('../validator/ProfessionalValidator')

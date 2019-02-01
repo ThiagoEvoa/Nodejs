@@ -1,4 +1,4 @@
-const professinalDAO = require('../dao/ProfessionalDAO')
+const professinalDAO = require('../dao/ProfessionalMongoDAO')
 
 var existProfessionalId = async (id, next) => {
     return await professinalDAO.findById(id).then((result) => {

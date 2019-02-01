@@ -12,6 +12,7 @@ services:
         - "5000:5000"
       depends_on:
         - mongodb
+        - mysql
       volumes:
         - .:/usr/app
   mongodb:
@@ -21,3 +22,10 @@ services:
       - ./data:/data/db
     ports:
       - "27017:27017"
+  mysql:
+    container_name: mysql-production
+    image: mysql:5.5
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "3306:3306"

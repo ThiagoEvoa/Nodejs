@@ -1,4 +1,4 @@
-const scheduleDAO = require('../dao/ScheduleDAO')
+const scheduleDAO = require('../dao/ScheduleMongoDAO')
 
 var existTimeAvailable = async (date, initialTime, finalTime, next) => {
     return await scheduleDAO.findByDateTime(date, initialTime, finalTime).then((result) => {
