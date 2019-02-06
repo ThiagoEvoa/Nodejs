@@ -24,7 +24,7 @@ app.get('/', (req, res, next) => {
 })
 
 app.post('/login', (req, res, next) => {
-    if (req.body.user === 'evoa' && req.body.password === '123456') {
+    if (req.body.user === 'evoa' && req.body.password === '12345') {
         const id = 1
         res.send({ auth: true, token: jwt.token(id) })
     } else {
