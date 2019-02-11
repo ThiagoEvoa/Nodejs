@@ -3,7 +3,7 @@ FROM node:alpine
 WORKDIR /usr/app
 
 COPY ["package.json", "package-lock.json*", "./"]
-RUN npm install --production --silent && mv node_modules ../
+RUN npm install && mv node_modules ../
 
 COPY . .
 
